@@ -28,21 +28,6 @@ function setup(){
 
 
 function draw(){
-  if (keyIsDown(LEFT_ARROW))
-    xx-=0.1;
-
-  if (keyIsDown(RIGHT_ARROW))
-    xx+=0.1;
-
-  if (keyIsDown(UP_ARROW))
-    y-=5;
-
-  if (keyIsDown(DOWN_ARROW))
-    y+=5;
-
-
-
-
    background(50);
    fill(c);
    stroke("#115299");
@@ -125,17 +110,17 @@ function draw(){
 
 function keyReleased(){
 
-    if (keyCode===UP_ARROW){
+    if (keyCode==UP_ARROW){
       xx+=0.1;
     }
-    else if (keyCode === DOWN_ARROW){
+    else if (keyCode == DOWN_ARROW){
       xx-=0.1;
 		}
 
-    else if (keyCode === LEFT_ARROW){
+    else if (keyCode == LEFT_ARROW){
       yy-=0.1;
 		}
-    else if (keyCode === RIGHT_ARROW){
+    else if (keyCode == RIGHT_ARROW){
       yy+=0.1;
 		}
     return false;
