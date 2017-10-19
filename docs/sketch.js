@@ -3,6 +3,11 @@ var vertices;
 
 
 var yy=0;
+var rotX=0, rotY=0;
+var vertices;
+
+
+var yy=0;
 var xx=0;
 var c;
 
@@ -42,22 +47,7 @@ function draw(){
    rotateY(-rotY);
 
 
-   p1.x=p1.x+xx*p1.z;
-   p1.y=p1.y+yy*p1.z;
-   p2.x=p2.x+xx*p2.z;
-   p2.y=p2.y+yy*p2.z;
-   p3.x=p3.x+xx*p3.z;
-   p3.y=p3.y+yy*p3.z;
-   p4.x=p4.x+xx*p4.z;
-   p4.y=p4.y+yy*p4.z;
-   p5.x=p5.x+xx*p5.z;
-   p5.y=p5.y+yy*p5.z;
-   p6.x=p6.x+xx*p6.z;
-   p6.y=p6.y+yy*p6.z;
-   p7.x=p7.x+xx*p7.z;
-   p7.y=p7.y+yy*p7.z;
-   p8.x=p8.x+xx*p8.z;
-   p8.y=p8.y+yy*p8.z;
+   aumento();
 
    axes();
 
@@ -108,21 +98,44 @@ function draw(){
 
 }
 
+function aumento(){
+   p1.x=p1.x+xx*p1.z;
+   p1.y=p1.y+yy*p1.z;
+   p2.x=p2.x+xx*p2.z;
+   p2.y=p2.y+yy*p2.z;
+   p3.x=p3.x+xx*p3.z;
+   p3.y=p3.y+yy*p3.z;
+   p4.x=p4.x+xx*p4.z;
+   p4.y=p4.y+yy*p4.z;
+   p5.x=p5.x+xx*p5.z;
+   p5.y=p5.y+yy*p5.z;
+   p6.x=p6.x+xx*p6.z;
+   p6.y=p6.y+yy*p6.z;
+   p7.x=p7.x+xx*p7.z;
+   p7.y=p7.y+yy*p7.z;
+   p8.x=p8.x+xx*p8.z;
+   p8.y=p8.y+yy*p8.z;
+
+xx=xx*0;
+yy=yy*0;
+
+}
+
 function keyReleased(){
 
     if (keyCode==UP_ARROW){
-      xx+=0.1;
+      yy-=0.1;
     }
     else if (keyCode == DOWN_ARROW){
-      xx-=0.1;
+      yy+=0.1;
 		}
 
     else if (keyCode == LEFT_ARROW){
-      yy-=0.1;
+      xx-=0.1;
 		}
     else if (keyCode == RIGHT_ARROW){
-      yy+=0.1;
-		}
+      xx+=0.1;
+    }
     return false;
 
 }
@@ -144,8 +157,3 @@ function axes() {
   line(0, 0, -1000, 0, 0, 1000);
 
 }
-
-
-
-var x = 100;
-var y = 100;
